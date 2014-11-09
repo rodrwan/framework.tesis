@@ -1,0 +1,430 @@
+Cache freed; byte size is: 0
+Created a feature vector cache to hold <= 74154 elements in <= 3072.0MB
+Using max component regularization
+framework iter: 1/1
+saving 0/0 cache entries
+Shrinking cache...
+Cache holds 0 feature vectors (0.0MB) prior to shrinking
+Cache holds 0 feature vectors (0.0MB) after shrinking
+poslatent process running..
+>> poslatent function: framework car: iter 1/1: latent positive: 1/2322 (1: comp 7  score 3.574)
+
+ans =
+
+    3.5742
+
+>> poslatent function: framework car: iter 1/1: latent positive: 2/2322 (1: comp 8  score 3.574)
+
+ans =
+
+    3.5742
+
+>> poslatent function: framework car: iter 1/1: latent positive: 3/2322 (1: comp 4  score 3.964)
+>> poslatent function: framework car: iter 1/1: latent positive: 3/2322 (2: no overlap)
+
+ans =
+
+    3.9638
+
+>> poslatent function: framework car: iter 1/1: latent positive: 4/2322 (1: comp 3  score 3.902)
+>> poslatent function: framework car: iter 1/1: latent positive: 4/2322 (2: no overlap)
+
+ans =
+
+    3.9016
+
+>> poslatent function: framework car: iter 1/1: latent positive: 5/2322 (1: comp 7  score 3.841)
+
+ans =
+
+    3.8413
+
+>> poslatent function: framework car: iter 1/1: latent positive: 6/2322 (1: comp 8  score 3.841)
+
+ans =
+
+    3.8413
+
+>> poslatent function: framework car: iter 1/1: latent positive: 7/2322 (1: no overlap)
+>> poslatent function: framework car: iter 1/1: latent positive: 8/2322 (1: no overlap)
+>> poslatent function: framework car: iter 1/1: latent positive: 9/2322 (1: comp 3  score 4.010)
+
+ans =
+
+    4.0101
+
+>> poslatent function: framework car: iter 1/1: latent positive: 10/2322 (1: comp 4  score 4.081)
+
+ans =
+
+    4.0813
+
+>> poslatent function: framework car: iter 1/1: latent positive: 11/2322 (1: comp 1  score 5.836)
+
+ans =
+
+    5.8360
+
+>> poslatent function: framework car: iter 1/1: latent positive: 12/2322 (1: comp 2  score 5.911)
+
+ans =
+
+    5.9111
+
+>> poslatent function: framework car: iter 1/1: latent positive: 13/2322 (1: comp 8  score 4.068)
+
+ans =
+
+    4.0681
+
+>> poslatent function: framework car: iter 1/1: latent positive: 14/2322 (1: comp 7  score 4.037)
+
+ans =
+
+    4.0373
+
+>> poslatent function: framework car: iter 1/1: latent positive: 15/2322 (1: comp 2  score 6.252)
+
+ans =
+
+    6.2517
+
+>> poslatent function: framework car: iter 1/1: latent positive: 16/2322 (1: comp 1  score 6.200)
+
+ans =
+
+    6.2000
+
+>> poslatent function: framework car: iter 1/1: latent positive: 17/2322 (1: comp 8  score 3.925)
+
+ans =
+
+    3.9252
+
+>> poslatent function: framework car: iter 1/1: latent positive: 18/2322 (1: comp 7  score 3.874)
+
+ans =
+
+    3.8745
+
+>> poslatent function: framework car: iter 1/1: latent positive: 19/2322 (1: comp 1  score 4.210)
+
+ans =
+
+    4.2095
+
+>> poslatent function: framework car: iter 1/1: latent positive: 20/2322 (1: comp 2  score 4.241)
+
+ans =
+
+    4.2413
+
+>> poslatent function: framework car: iter 1/1: latent positive: 21/2322 (1: no overlap)
+>> poslatent function: framework car: iter 1/1: latent positive: 21/2322 (2: comp 3  score 3.447)
+
+ans =
+
+    3.4470
+
+>> poslatent function: framework car: iter 1/1: latent positive: 22/2322 (1: no overlap)
+>> poslatent function: framework car: iter 1/1: latent positive: 22/2322 (2: comp 4  score 3.464)
+
+ans =
+
+    3.4645
+
+>> poslatent function: framework car: iter 1/1: latent positive: 23/2322 (1: comp 4  score 3.790)
+
+ans =
+
+    3.7897
+
+>> poslatent function: framework car: iter 1/1: latent positive: 24/2322 (1: comp 3  score 3.885)
+
+ans =
+
+    3.8847
+
+>> poslatent function: framework car: iter 1/1: latent positive: 25/2322 (1: comp 7  score 3.958)
+>> poslatent function: framework car: iter 1/1: latent positive: 25/2322 (2: no overlap)
+>> poslatent function: framework car: iter 1/1: latent positive: 25/2322 (3: comp 1  score 6.603)
+>> poslatent function: framework car: iter 1/1: latent positive: 25/2322 (4: comp 3  score 3.288)
+>> poslatent function: framework car: iter 1/1: latent positive: 25/2322 (5: comp 8  score 3.526)
+>> poslatent function: framework car: iter 1/1: latent positive: 25/2322 (6: comp 8  score 3.725)
+
+ans =
+
+    3.9582
+
+
+ans =
+
+    6.6030
+
+
+ans =
+
+    3.2875
+
+
+ans =
+
+    3.5261
+
+
+ans =
+
+    3.7252
+
+>> poslatent function: framework car: iter 1/1: latent positive: 26/2322 (1: comp 8  score 4.401)
+>> poslatent function: framework car: iter 1/1: latent positive: 26/2322 (2: no overlap)
+>> poslatent function: framework car: iter 1/1: latent positive: 26/2322 (3: comp 2  score 6.438)
+>> poslatent function: framework car: iter 1/1: latent positive: 26/2322 (4: comp 4  score 3.368)
+>> poslatent function: framework car: iter 1/1: latent positive: 26/2322 (5: comp 7  score 3.616)
+>> poslatent function: framework car: iter 1/1: latent positive: 26/2322 (6: comp 1  score 3.039)
+
+ans =
+
+    4.4013
+
+
+ans =
+
+    6.4383
+
+
+ans =
+
+    3.3685
+
+
+ans =
+
+    3.6161
+
+
+ans =
+
+    3.0393
+
+>> poslatent function: framework car: iter 1/1: latent positive: 27/2322 (1: comp 2  score 3.770)
+
+ans =
+
+    3.7701
+
+>> poslatent function: framework car: iter 1/1: latent positive: 28/2322 (1: comp 7  score 3.753)
+
+ans =
+
+    3.7533
+
+>> poslatent function: framework car: iter 1/1: latent positive: 29/2322 (1: comp 3  score 3.809)
+
+ans =
+
+    3.8086
+
+>> poslatent function: framework car: iter 1/1: latent positive: 30/2322 (1: comp 4  score 3.756)
+
+ans =
+
+    3.7560
+
+>> poslatent function: framework car: iter 1/1: latent positive: 31/2322 (1: comp 1  score 5.376)
+
+ans =
+
+    5.3759
+
+>> poslatent function: framework car: iter 1/1: latent positive: 32/2322 (1: comp 2  score 5.373)
+
+ans =
+
+    5.3733
+
+>> poslatent function: framework car: iter 1/1: latent positive: 33/2322 (1: comp 4  score 4.684)
+
+ans =
+
+    4.6836
+
+>> poslatent function: framework car: iter 1/1: latent positive: 34/2322 (1: comp 3  score 4.778)
+
+ans =
+
+    4.7778
+
+>> poslatent function: framework car: iter 1/1: latent positive: 35/2322 (1: comp 2  score 5.680)
+
+ans =
+
+    5.6800
+
+>> poslatent function: framework car: iter 1/1: latent positive: 36/2322 (1: comp 1  score 5.754)
+
+ans =
+
+    5.7544
+
+>> poslatent function: framework car: iter 1/1: latent positive: 37/2322 (1: comp 4  score 3.369)
+
+ans =
+
+    3.3690
+
+>> poslatent function: framework car: iter 1/1: latent positive: 38/2322 (1: comp 3  score 3.787)
+
+ans =
+
+    3.7868
+
+>> poslatent function: framework car: iter 1/1: latent positive: 39/2322 (1: comp 8  score 3.278)
+
+ans =
+
+    3.2775
+
+>> poslatent function: framework car: iter 1/1: latent positive: 40/2322 (1: comp 7  score 3.278)
+
+ans =
+
+    3.2781
+
+>> poslatent function: framework car: iter 1/1: latent positive: 41/2322 (1: comp 1  score 6.089)
+
+ans =
+
+    6.0892
+
+>> poslatent function: framework car: iter 1/1: latent positive: 42/2322 (1: comp 2  score 6.061)
+
+ans =
+
+    6.0606
+
+>> poslatent function: framework car: iter 1/1: latent positive: 43/2322 (1: comp 2  score 5.349)
+
+ans =
+
+    5.3492
+
+>> poslatent function: framework car: iter 1/1: latent positive: 44/2322 (1: comp 2  score 5.576)
+
+ans =
+
+    5.5761
+
+>> poslatent function: framework car: iter 1/1: latent positive: 45/2322 (1: comp 4  score 3.655)
+
+ans =
+
+    3.6546
+
+>> poslatent function: framework car: iter 1/1: latent positive: 46/2322 (1: comp 7  score 3.862)
+
+ans =
+
+    3.8619
+
+>> poslatent function: framework car: iter 1/1: latent positive: 47/2322 (1: comp 8  score 3.792)
+
+ans =
+
+    3.7920
+
+>> poslatent function: framework car: iter 1/1: latent positive: 48/2322 (1: comp 7  score 3.738)
+
+ans =
+
+    3.7377
+
+>> poslatent function: framework car: iter 1/1: latent positive: 49/2322 (1: comp 2  score 4.140)
+
+ans =
+
+    4.1401
+
+>> poslatent function: framework car: iter 1/1: latent positive: 50/2322 (1: comp 4  score 4.013)
+
+ans =
+
+    4.0133
+
+>> poslatent function: framework car: iter 1/1: latent positive: 51/2322 (1: comp 3  score 3.887)
+>> poslatent function: framework car: iter 1/1: latent positive: 51/2322 (2: comp 8  score 3.964)
+>> poslatent function: framework car: iter 1/1: latent positive: 51/2322 (3: comp 4  score 3.485)
+
+ans =
+
+    3.8865
+
+
+ans =
+
+    3.9643
+
+
+ans =
+
+    3.4850
+
+>> poslatent function: framework car: iter 1/1: latent positive: 52/2322 (1: comp 4  score 3.921)
+>> poslatent function: framework car: iter 1/1: latent positive: 52/2322 (2: comp 7  score 3.751)
+>> poslatent function: framework car: iter 1/1: latent positive: 52/2322 (3: comp 4  score 3.405)
+
+ans =
+
+    3.9207
+
+
+ans =
+
+    3.7506
+
+
+ans =
+
+    3.4052
+
+>> poslatent function: framework car: iter 1/1: latent positive: 53/2322 (1: comp 2  score 5.292)
+>> poslatent function: framework car: iter 1/1: latent positive: 53/2322 (2: comp 3  score 3.871)
+
+ans =
+
+    5.2918
+
+
+ans =
+
+    3.8708
+
+>> poslatent function: framework car: iter 1/1: latent positive: 54/2322 (1: comp 1  score 5.266)
+>> poslatent function: framework car: iter 1/1: latent positive: 54/2322 (2: comp 4  score 3.896)
+
+ans =
+
+    5.2661
+
+
+ans =
+
+    3.8960
+
+>> poslatent function: framework car: iter 1/1: latent positive: 55/2322 (1: comp 2  score 5.617)
+>> poslatent function: framework car: iter 1/1: latent positive: 55/2322 (2: comp 7  score 3.838)
+>> poslatent function: framework car: iter 1/1: latent positive: 55/2322 (3: no overlap)
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('train>poslatent', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/train/train.m', 577)" style="font-weight:bold">train>poslatent</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/train/train.m',577,0)">line 577</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/train/train.m', 125)" style="font-weight:bold">train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/train/train.m',125,0)">line 125</a>)
+      [num_entries_added, num_examples_added, fusage, component_usage,
+      scores] = poslatent(t, iter, model, pos, fg_overlap, num_fp);
+
+In <a href="matlab:helpUtils.errorDocCallback('pascal_train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/train/pascal_train.m', 131)" style="font-weight:bold">pascal_train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/train/pascal_train.m',131,0)">line 131</a>)
+  model = train(model, impos, neg_small, false, false, 1, 1, ...
+
+In <a href="matlab:helpUtils.errorDocCallback('pascal', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/pascal.m', 53)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/pascal.m',53,0)">line 53</a>)
+model = pascal_train(cls, n, note)
+} 
+try pascal('car',4); catch pascal('person', 4);end

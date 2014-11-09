@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="BRzr">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="initial-scale=1">
+    <style>html { -webkit-text-size-adjust: 100%; }</style>
+    <link href="https://s3.amazonaws.com/f.cl.ly/items/2G2905370q090x2m0t1O/152.png" sizes="152x152" rel="apple-touch-icon">
+    <link href="https://s3.amazonaws.com/f.cl.ly/items/2h0o0E383z0O0e2U2V1q/120.png" sizes="120x120" rel="apple-touch-icon">
+
+    <title>Pic</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <style type="text/css" media="all">
+      body {
+        font-family: 'Open Sans', sans-serif;
+        color: #777;
+        padding-top: 20px;
+        background-color: white;
+      }
+      .hide { display: none; }
+      .image-container {
+        display: inline-block;
+        width: 640px;
+        height: 480px;
+      }
+      .loader-container {
+        position: relative;
+        top: 20%;
+        left: 45%;
+      }
+      .loader {
+        z-index: 999;
+      }
+      .content {
+        text-align: center;
+      }
+      .spinner {
+        margin: 100px auto;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+      }
+
+      .cube1, .cube2 {
+        background-color: #333;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        -webkit-animation: cubemove 1.8s infinite ease-in-out;
+        animation: cubemove 1.8s infinite ease-in-out;
+      }
+
+      .cube2 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+      }
+
+      @-webkit-keyframes cubemove {
+        25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+        50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+        75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+        100% { -webkit-transform: rotate(-360deg) }
+      }
+
+      @keyframes cubemove {
+        25% {
+          transform: translateX(42px) rotate(-90deg) scale(0.5);
+          -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+        } 50% {
+          transform: translateX(42px) translateY(42px) rotate(-179deg);
+          -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+        } 50.1% {
+          transform: translateX(42px) translateY(42px) rotate(-180deg);
+          -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+        } 75% {
+          transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+          -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+        } 100% {
+          transform: rotate(-360deg);
+          -webkit-transform: rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Bottles Recognizer</h1>
+      <video autoplay></video>
+      <div class="image-container">
+        <div class="loader-container hide">
+          <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+          </div>
+        </div>
+        <img id="display" src="" height="480" width="640">
+      </div>
+      <canvas style="display:none;" width="640" height="480"></canvas>
+      <img style="display:none;" id="plain-picture" src="" height="480" width="640">
+      <br/>
+      <br/>
+
+      <form class="pure-form pure-form-aligned" action="#">
+        <fieldset>
+          <div id="ios" class="hide pure-control-group">
+            <label for="name">Image</label>
+            <input id="fileselect" type="file" accept="image/*" capture="camera">
+          </div>
+          <div class="pure-control-group">
+            <label for="name">Threshold</label>
+            <input id="threshold" type="number" value="" placeholder="-0.5" step="any">
+          </div>
+          <div id="desktop-controls" class="pure-controls">
+            <button id="send" type="submit" class="pure-button pure-button-primary">Snapshot!</button>
+            <button id="resend" type="submit" class="pure-button pure-button">Resend!</button>
+          </div>
+          <div id="mobile-controls" class="pure-controls hide">
+            <button id="msend" type="submit" class="pure-button pure-button-primary">Send!</button>
+          </div>
+        </fieldset>
+      </form>
+      <br/>
+    </div>
+    <script>
+      $(function(){
+        var errorCallback = function(e) {
+          console.log('Reeeejected!', e);
+        };
+        var video = document.querySelector('video');
+        var canvas = document.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+        var $img = $('img#display');
+        ctx.lineWidth="5";
+        var localMediaStream = null;
+        var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false;
+
+        if (iOS) {
+          $('video').hide();
+          $('div#desktop-controls').hide();
+          $('div#mobile-controls').show();
+          $('div#ios').removeClass('hide');
+          $('button#msend').bind('click', sendImage);
+
+          $('input[type=file]').bind('change',function(e){
+            var f = $('input[type=file]')[0].files[0];
+
+            fr = new FileReader();
+            fr.onload = receivedData; // add onload event
+
+            fr.readAsDataURL(f); // get captured image as data URI
+          })
+
+          function receivedData() {
+            // readAsDataURL is finished - add URI to IMG tag src
+            $img.attr('src', fr.result);
+            $('img#plain-picture').attr('src', fr.result);
+          }
+        }
+
+        function snapshot() {
+          if (localMediaStream) {
+            processImage();
+            sendImage();
+          }
+        }
+
+        function sendImage() {
+          startLoading();
+          var url = "http://190.162.104.181:8080/upload";
+          var threshold = parseFloat($('input#threshold').val() || -0.5);
+          var image = $("img#plain-picture").attr('src');
+          if (!image) {
+            stopLoading();
+            return false;
+          }
+          $.post(url, {image: image, threshold: threshold}, function(data) {
+            console.log("Uploaded!");
+            console.log(data);
+            redraw(data);
+          })
+            .fail(function(e){
+              console.log("error");
+              console.log(JSON.stringify(e));
+            })
+            .always(function() {
+              stopLoading();
+            });
+        }
+
+        function processImage() {
+          ctx.drawImage(video, 0, 0);
+          $img.attr('src', canvas.toDataURL());
+          $("img#plain-picture").attr('src', canvas.toDataURL());
+        }
+
+        function startLoading() {
+          console.log("Started loading");
+          $('.loader-container').removeClass('hide');
+        }
+
+        function stopLoading() {
+          console.log("Stop loading");
+          $('.loader-container').addClass('hide');
+        }
+        function getColors() {
+          return _.shuffle(["#FF4136", "#FF851B", "#85144B", "#FFDC00",
+                           "#39CCCC", "#001F3F", "#0074D9", "#3D9970",
+                           "#B10DC9", "#AAAAAA", "#111111"]);
+        }
+
+        function redraw(data) {
+          var $img = $('img#display');
+          ctx.drawImage($img[0], 0,0);
+          var colors = getColors();
+          ctx.beginPath();
+          ctx.fillStyle = colors.pop();
+          if( Object.prototype.toString.call( data ) === '[object Array]' ) {
+            if (data.length === 0) {
+              alert("Objeto no identificado");
+              return false;
+            }
+            _.each(data, function(rectangle){
+              ctx.rect(rectangle.x1,rectangle.y1,rectangle.x2 - rectangle.x1,rectangle.y2 - rectangle.y1);
+              if (colors.length < 1)
+                colors = getColors();
+              ctx.strokeStyle = colors.pop();
+              ctx.stroke();
+              ctx.closePath();
+              ctx.beginPath();
+            });
+          } else {
+            alert("manso error");
+          }
+          $img.attr('src', canvas.toDataURL());
+        }
+
+        $('button').click(function(e){e.preventDefault();});
+        $('button#send').bind('click', snapshot);
+        $('button#resend').bind('click', sendImage);
+
+        var streamFunc = function(stream) {
+          video.src = window.URL.createObjectURL(stream);
+          localMediaStream = stream;
+        }
+        window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+
+        if (!iOS) {
+          navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+          navigator.getUserMedia({video: true}, streamFunc, errorCallback);
+        }
+      }());
+    </script>
+  </body>
+</html>

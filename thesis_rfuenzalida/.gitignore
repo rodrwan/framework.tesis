@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.bbl
+*.blg
+*.lof
+*.lot
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.sty
+*.cls
+thesis_rfuenzalidac1.tex

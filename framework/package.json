@@ -1,0 +1,29 @@
+{
+  "name": "patrenes",
+  "version": "0.0.0",
+  "description": "asdfs",
+  "main": "web.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "~3.5.0",
+    "formidable": "~1.0.15",
+    "lodash": "~2.4.1",
+    "colors": "~0.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "fsadfs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "asfasf"
+  },
+  "keywords": [
+    "asfdasfd"
+  ],
+  "author": "asdfsf",
+  "license": "MIT"
+}

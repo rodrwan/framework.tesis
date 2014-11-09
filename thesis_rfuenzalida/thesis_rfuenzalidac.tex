@@ -1,0 +1,76 @@
+%
+% ---------------------------------------------------------------
+% template para escribir tesis/memorias en
+% la Universidad Diego Portales
+% ---------------------------------------------------------------
+%
+\documentclass[final]{udpthesis}
+
+\usepackage[T1]{fontenc} % output
+\usepackage[utf8]{inputenc}% input
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+
+\usepackage{amsmath} %%% para split
+\udptheme{EIT}
+
+
+% ---------------------------------------------------------------
+% Comienzo del documento
+% ---------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
+%\usepackage[numbered]{bookmark}
+\begin{document}
+\frontmatter
+\title{Propuesta de descriptor basado en partes para el reconocimiento de expresiones y objetos en secuencias de imágenes}
+\author{Rodrigo Andrés Fuenzalida Cabeza}
+\date{Junio, 2014}% (Ej: Enero, 2006)
+
+\professor{Adín Ramírez}
+\committee{Javier Pereira}{}
+\dedicatory{Este trabajo va dedicado a mi madre, por todos esos años de sacrificio para darme una excelente educación.}
+\acknowledgment{(Nota redactada sobriamente en la cual se agradece a quienes han colaborado en la elaboración del trabajo.)}
+\makecover
+
+
+% Indices de materia, figuras y tablas
+\tableofcontents                        % tabla de contenido
+\listoffigures                          % índice de figuras
+\listoftables                           % índice de tablas
+
+% Resumenes
+\begin{abstract}
+(Abstract es el resumen en inglés que no debe exceder una página.)
+\end{abstract}
+
+\begin{resumen}
+(El resumen no debe contener menos de 100 palabras ni mas de 300 palabras.)
+\end{resumen}
+
+
+% Contenido
+\mainmatter
+\input{CapI}
+\input{CapII}
+
+
+% Bibliografía
+% ---------------------------------------------------------------
+% tubiblio.bib es el archivo con la base de datos bibliografica
+\backmatter
+\bibliographystyle{ieeetr}
+\bibliography{referencias}
+
+% Anexos
+\appendix
+% aca se incluyen los archivos con el texto de los anexos
+% (Ej.: anx-uno.tex es el archivo de un anexo)
+\input{Anexo}
+% ... mas archivos de anexos
+
+\end{document}
+% ---------------------------------------------------------------
