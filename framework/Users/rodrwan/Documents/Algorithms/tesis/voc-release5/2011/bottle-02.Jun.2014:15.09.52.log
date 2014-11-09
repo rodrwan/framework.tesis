@@ -1,0 +1,84 @@
+{Improper index matrix reference.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('split', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m', 14)" style="font-weight:bold">split</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,0)">line 14</a>)
+h = [pos(:).y2]' - [pos(:).y1]' + 1;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal_train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m', 31)" style="font-weight:bold">pascal_train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m',31,0)">line 31</a>)
+spos = split(pos, n);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m', 49)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m',49,0)">line 49</a>)
+model = pascal_train(cls, n, note);
+} 
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,1)">14  </a>h = [pos(:).y2]' - [pos(:).y1]' + 1;
+clc
+example_classifier
+{Error using <a href="matlab:helpUtils.errorDocCallback('textread', '/Applications/MATLAB_R2013a.app/toolbox/matlab/iofun/textread.m', 166)" style="font-weight:bold">textread</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/iofun/textread.m',166,0)">line 166</a>)
+File not found.
+
+Error in
+<a href="matlab:helpUtils.errorDocCallback('example_classifier>train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/VOC2011/VOCdevkit/example_classifier.m', 27)" style="font-weight:bold">example_classifier>train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/VOC2011/VOCdevkit/example_classifier.m',27,0)">line
+27</a>)
+[ids,classifier.gt]=textread(sprintf(VOCopts.clsimgsetpath,cls,VOCopts.trainset),'%s
+%d');
+
+Error in <a href="matlab:helpUtils.errorDocCallback('example_classifier', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/VOC2011/VOCdevkit/example_classifier.m', 12)" style="font-weight:bold">example_classifier</a>
+(<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/VOC2011/VOCdevkit/example_classifier.m',12,0)">line 12</a>)
+    classifier=train(VOCopts,cls);
+    % train classifier
+} 
+<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/iofun/textread.m',166,1)">166 </a>    error(message('MATLAB:textread:FileNotFound'));
+VOCopts.clsimgsetpath
+{Undefined variable "VOCopts" or class "VOCopts.clsimgsetpath".
+} 
+VOCopts.clsimgsetpath
+{Undefined variable "VOCopts" or class
+"VOCopts.clsimgsetpath".
+} 
+train(VOCopts,cls)
+{Undefined function or variable 'VOCopts'.
+} 
+clc
+pascal('bottle', 3);
+{Error using <a href="matlab:helpUtils.errorDocCallback('ones')" style="font-weight:bold">ones</a>
+Leading inputs must be numeric.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal', '/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m', 37)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m',37,0)">line 37</a>)
+P(:,1) = ones(n,1,classname);
+} 
+<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m',37,1)">37  </a>P(:,1) = ones(n,1,classname);
+pascal('bottle', 3);
+{Error using <a href="matlab:helpUtils.errorDocCallback('ones')" style="font-weight:bold">ones</a>
+Leading inputs must be numeric.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal', '/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m', 37)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m',37,0)">line 37</a>)
+P(:,1) = ones(n,1,classname);
+} 
+<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m',37,1)">37  </a>P(:,1) = ones(n,1,classname);
+n
+
+n =
+
+bottle
+
+example_detector
+{Undefined function or variable
+'example_detector'.
+} 
+example_detector
+{Undefined function or variable
+'example_detector'.
+} 
+pascal('bottle', 3, '', 0, '2011');
+{Error using <a href="matlab:helpUtils.errorDocCallback('pascal')" style="font-weight:bold">pascal</a>
+Too many input arguments.
+} 
+pascal(3,3, 'cans');
+{Error using <a href="matlab:helpUtils.errorDocCallback('cast')" style="font-weight:bold">cast</a>
+Unsupported class for conversion.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal', '/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m', 36)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m',36,0)">line 36</a>)
+P = diag((-1).^(0:cast(n,classname)-1));
+} 
+<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/elmat/pascal.m',36,1)">36  </a>P = diag((-1).^(0:cast(n,classname)-1));
+clc
+pascal(3,3, 'cans');

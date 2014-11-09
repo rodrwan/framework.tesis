@@ -1,0 +1,10 @@
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m',28,1)">28  </a>[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+if system_dependent('IsDebugMode')==1, dbstep; end
+[cachedir cls '_' dataset_fg '_' year]
+
+ans =
+
+/Users/rodrwan/Documents/Algorithms/tesis/voc-release5//Users/rodrwan/Documents/Algorithms/tesis/voc-release5/2011/cans_trainval_2011
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+pascal('cans', 3);

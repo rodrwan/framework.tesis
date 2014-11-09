@@ -1,0 +1,100 @@
+{Improper index matrix reference.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('split', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m', 14)" style="font-weight:bold">split</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,0)">line 14</a>)
+h = [pos(:).y2]' - [pos(:).y1]' + 1;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal_train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m', 31)" style="font-weight:bold">pascal_train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m',31,0)">line 31</a>)
+spos = split(pos, n);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m', 49)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m',49,0)">line 49</a>)
+model = pascal_train(cls, n, note);
+} 
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,1)">14  </a>h = [pos(:).y2]' - [pos(:).y1]' + 1;
+pascal_data(cls, conf.pascal.year)
+{Undefined function or variable 'cls'.
+} 
+conf = voc_config();
+cls = 'cans';
+pascal_data(cls, conf.pascal.year);
+pascal_data(cls, conf.pascal.year)
+
+ans =
+
+     []
+
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',18,1)">18  </a>VOCopts    = conf.pascal.VOCopts;
+dbstep
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',20,1)">20  </a>try
+dbstep
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',21,1)">21  </a>  load([cachedir cls '_' dataset_fg '_' year]);
+dbstep
+End of function pascal_data.
+dbstep
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,1)">14  </a>h = [pos(:).y2]' - [pos(:).y1]' + 1;
+dbstep
+dbstep
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+dbstep
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+{Undefined function or variable 'cls'.
+} 
+clc
+conf = voc_config();
+cls = 'cans';
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',18,1)">18  </a>VOCopts    = conf.pascal.VOCopts;
+dbstep
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',20,1)">20  </a>try
+dbstep
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',21,1)">21  </a>  load([cachedir cls '_' dataset_fg '_' year]);
+dbstep
+End of function pascal_data.
+cls '_' dataset_fg '_' year
+{Error: "cls" was previously used as a
+variable, conflicting with its use here
+as the name of a function or command.
+See <a href="matlab: helpview([docroot '/techdoc/matlab_prog/matlab_prog.map'],'function_call_command_syntax')">"How MATLAB Recognizes Command
+Syntax" in the MATLAB documentation</a> for
+details.
+} 
+cls
+
+cls =
+
+cans
+
+dataset_fg
+
+dataset_fg =
+
+trainval
+
+year
+
+year =
+
+2011
+
+dbstep
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+dbstep
+conf = voc_config();
+cls = 'cans';
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',18,1)">18  </a>VOCopts    = conf.pascal.VOCopts;
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+dbstep
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+dbstep
+
+
+
+clc
+pascal('cans', 3);

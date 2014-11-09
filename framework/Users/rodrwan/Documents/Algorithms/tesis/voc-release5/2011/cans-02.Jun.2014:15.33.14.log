@@ -1,0 +1,69 @@
+{Improper index matrix reference.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('split', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m', 14)" style="font-weight:bold">split</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,0)">line 14</a>)
+h = [pos(:).y2]' - [pos(:).y1]' + 1;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal_train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m', 31)" style="font-weight:bold">pascal_train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m',31,0)">line 31</a>)
+spos = split(pos, n);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m', 49)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m',49,0)">line 49</a>)
+model = pascal_train(cls, n, note);
+} 
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,1)">14  </a>h = [pos(:).y2]' - [pos(:).y1]' + 1;
+cls
+{Undefined function or variable 'cls'.
+} 
+pascal_train(cls, n, note)
+{Undefined function or variable 'cls'.
+} 
+cls = 'cans';
+pascal_train(cls, n, note)
+{Undefined function or variable 'note'.
+} 
+note = '';
+n = 2;
+pascal_train(cls, n, note)
+{Improper index matrix reference.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('split', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m', 14)" style="font-weight:bold">split</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,0)">line 14</a>)
+h = [pos(:).y2]' - [pos(:).y1]' + 1;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal_train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m', 31)" style="font-weight:bold">pascal_train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m',31,0)">line 31</a>)
+spos = split(pos, n);
+} 
+<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/split.m',14,1)">14  </a>h = [pos(:).y2]' - [pos(:).y1]' + 1;
+pos
+
+pos =
+
+     []
+
+n
+
+n =
+
+     2
+
+pascal_data(cls, conf.pascal.year)
+{Undefined function or variable 'cls'.
+} 
+cls = 'cans';
+pascal_data(cls, conf.pascal.year)
+{Undefined variable "conf" or class
+"conf.pascal.year".
+} 
+conf.pascal.year = '2011';
+pascal_data(cls, conf.pascal.year)
+
+ans =
+
+     []
+
+pascal_data(cls, conf.pascal.year)
+
+ans =
+
+     []
+
+clc
+pascal('cans', 0);

@@ -1,0 +1,35 @@
+{Error using <a href="matlab:helpUtils.errorDocCallback('textread', '/Applications/MATLAB_R2013a.app/toolbox/matlab/iofun/textread.m', 166)" style="font-weight:bold">textread</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/iofun/textread.m',166,0)">line 166</a>)
+File not found.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal_data', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m', 122)" style="font-weight:bold">pascal_data</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/data/pascal_data.m',122,0)">line 122</a>)
+  ids    = textread(sprintf(VOCopts.imgsetpath, dataset_bg), '%s');
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal_train', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m', 28)" style="font-weight:bold">pascal_train</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/train/pascal_train.m',28,0)">line 28</a>)
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('pascal', '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m', 49)" style="font-weight:bold">pascal</a> (<a href="matlab: opentoline('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/pascal.m',49,0)">line 49</a>)
+model = pascal_train(cls, n, note);
+} 
+<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/iofun/textread.m',166,1)">166 </a>    error(message('MATLAB:textread:FileNotFound'));
+if system_dependent('IsDebugMode')==1, dbcont; end
+varargin{1}
+
+ans =
+
+/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/VOC2011/VOCdevkit/VOC2011/ImageSets/Main/train.txt
+
+clc
+varargin{1}
+
+ans =
+
+/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/VOC2011/VOCdevkit/VOC2011/ImageSets/Main/train.txt
+
+clc
+varargin{1}
+
+ans =
+
+/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/VOC2011/VOCdevkit/VOC2011/ImageSets/Main/train.txt
+
+pascal('bottle', 3);
