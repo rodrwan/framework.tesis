@@ -531,7 +531,7 @@ for i = 1:batchsize:numpos
   clear('data');
   empties = cell(1, thisbatchsize);
   data = struct('boxdata', empties, 'pyra', empties);
-  for k = 1:thisbatchsize
+  parfor k = 1:thisbatchsize
     j = i+k-1;
     msg = sprintf('>> poslatent function: %s %s: iter %d/%d: latent positive: %d/%d',  procid(), model.class, t, iter, j, numpos);
     % skip small examples
@@ -639,7 +639,7 @@ for i = 1:batchsize:numneg
   thisbatchsize = batchsize - max(0, (i+batchsize-1) - numneg);
   det_limit = ceil((max_num_examples - num_examples) / thisbatchsize);
   data = cell(thisbatchsize, 1);
-  for k = 1:thisbatchsize
+  parfor k = 1:thisbatchsize
     j = inds(i+k-1);
     fprintf('%s %s: iter %d/%d: hard negatives: %d/%d (%d)\n', procid(), model.class, t, negiter, i+k-1, numneg, j);
     im = color(imreadx(neg(j)));
