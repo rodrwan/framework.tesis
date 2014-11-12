@@ -21,6 +21,8 @@ conf = voc_config('pascal.year', year, ...
                   'eval.test_set', testset);
 VOCopts  = conf.pascal.VOCopts;
 cachedir = conf.paths.model_dir;
+algorithm = conf.algorithm;
+verbose = conf.verbose;
 cls = model.class;
 
 ids = textread(sprintf(VOCopts.imgsetpath, testset), '%s');
@@ -36,8 +38,7 @@ catch
   bs_out = cell(1, num_ids);
   th = tic();
   parfor i = 1:num_ids;
-    fprintf('%s: testing: %s %s, %d/%d\n', cls, testset, year, ...
-            i, num_ids);
+    fprintf('%s: testing: %s %s, %d/%d\n', cls, testset, year, i, num_ids);
     if strcmp('inriaperson', cls)
       % INRIA uses a mixutre of PNGs and JPGs, so we need to use the annotation
       % to locate the image.  The annotation is not generally available for PASCAL
@@ -45,9 +46,9 @@ catch
       rec = PASreadrecord(sprintf(opts.annopath, ids{i}));
       im = imread([opts.datadir rec.imgname]);
     else
-      im = imread(sprintf(opts.imgpath, ids{i}));  
+      im = imread(sprintf(opts.imgpath, ids{i}));
     end
-    [ds, bs] = imgdetect(im, model, model.thresh);
+    [ds, bs] = imgdetect(im, model, model.thresh, algorithm, verbose);
     if ~isempty(bs)
       unclipped_ds = ds(:,1:4);
       [ds, bs, rm] = clipboxes(im, ds, bs);
@@ -64,8 +65,8 @@ catch
 
       % Save filter boxes in parts
       if model.type == model_types.MixStar
-        % Use the structure of a mixture of star models 
-        % (with a fixed number of parts) to reduce the 
+        % Use the structure of a mixture of star models
+        % (with a fixed number of parts) to reduce the
         % size of the bounding box matrix
         bs = reduceboxes(model, bs);
         bs_out{i} = bs;
