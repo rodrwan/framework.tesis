@@ -1,0 +1,13 @@
+Elapsed time is 0.454812 seconds.
+Cache freed; byte size is: 0
+ALL JOB WAS DONEENTER HERE!!!!!!!!
+{Error using textread (line 166)
+File not found.
+
+Error in pascal_test (line 26)
+ids = textread(sprintf(VOCopts.imgsetpath, testset), '%s');
+
+Error in pascal (line 68)
+ds = pascal_test(model, testset, testyear, suffix);
+} 
+exit

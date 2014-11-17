@@ -1,0 +1,6 @@
+{Undefined function or variable "model".
+
+Error in pascal (line 62)
+model.thresh = min(conf.eval.max_thresh, model.thresh);
+} 
+exit

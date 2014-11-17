@@ -1,0 +1,41 @@
+Elapsed time is 0.387684 seconds.
+Cache freed; byte size is: 0
+ALL JOB WAS DONETesting !!!!!!!!
+Evaluation !!!!!!
+AP = 0.0000 (without bounding box prediction)
+framework bottle: bboxdata: 1353/2518
+framework bottle: bboxdata: 840/2518
+framework bottle: bboxdata: 839/2518
+framework bottle: bboxdata: 838/2518
+framework bottle: bboxdata: 560/2518
+framework bottle: bboxdata: 280/2518
+framework bottle: bboxdata: 1120/2518
+framework bottle: bboxdata: 1548/2518
+framework bottle: bboxdata: 1547/2518
+framework bottle: bboxdata: 1546/2518
+{Error using gdetect_pos_prepare (line 19)
+Not enough input arguments.
+
+Error in bboxpred_data>(parfor body) (line 48)
+    [pyra, model_dp] = gdetect_pos_prepare(im, model, bbox, 0.7);
+
+Error in bboxpred_data (line 35)
+  parfor i = 1:numpos
+
+Error in bboxpred_train (line 26)
+  [ds_all, bs_all, targets] = bboxpred_data(name);
+
+Error in bboxpred_rescore (line 25)
+  model = bboxpred_train(name, method);
+
+Error in pascal (line 75)
+[ap1, ap2] = bboxpred_rescore(cls, testset, testyear, suffix);
+
+Error in training (line 3)
+pascal(cls, n);
+
+Caused by:
+    Error using gdetect_pos_prepare (line 19)
+    Not enough input arguments.
+} 
+

@@ -1,0 +1,19 @@
+bottle: parsing positives (trainval 2011): 87/11540
+bottle: parsing positives (trainval 2011): 175/11540
+bottle: parsing positives (trainval 2011): 266/11540
+bottle: parsing positives (trainval 2011): 357/11540
+bottle: parsing positives (trainval 2011): 439/11540
+bottle: parsing positives (trainval 2011): 523/11540
+{Operation terminated by user during PASreadrecord (line 10)
+
+
+In pascal_data (line 34)
+    rec           = PASreadrecord(sprintf(VOCopts.annopath, ids{i}));
+
+In pascal_train (line 30)
+[pos, neg, impos] = pascal_data(cls, conf.pascal.year);
+
+In pascal (line 53)
+model = pascal_train(cls, n, note);
+} 
+exit

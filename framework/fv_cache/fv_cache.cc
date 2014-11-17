@@ -2,7 +2,7 @@
 #include "model.h"
 #include "fv_cache.h"
 #include "obj_func.h"
-#include "/usr/local/lib/gcc/x86_64-apple-darwin13.1.0/4.9.0/include/omp.h"
+#include <omp.h>
 #include <cmath>
 #include <csignal>
 #include <iostream>

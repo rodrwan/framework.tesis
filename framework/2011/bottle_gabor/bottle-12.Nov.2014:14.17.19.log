@@ -1,0 +1,31 @@
+Elapsed time is 0.458303 seconds.
+Cache freed; byte size is: 0
+ALL JOB WAS DONEENTER HERE!!!!!!!!
+bottle: testing: test 2011, 10994/10994
+bottle: testing: test 2011, 10993/10994
+bottle: testing: test 2011, 10992/10994
+bottle: testing: test 2011, 10991/10994
+bottle: testing: test 2011, 10990/10994
+bottle: testing: test 2011, 10989/10994
+{Operation terminated by user during newFeatures (line 4)
+
+
+In featpyramid (line 53)
+  pyra.feat{i+extra_interval} = newFeatures(scaled, sbin/2, algorithm, verbose);
+
+In imgdetect (line 15)
+pyra = featpyramid(im, model, algorithm, verbose);
+
+In pascal_test>(parfor body) (line 51)
+    [ds, bs] = imgdetect(im, model, model.thresh, algorithm, verbose);
+
+In parallel_function (line 471)
+            consume(base, limit, F(base, limit, supply(base, limit)));
+
+In pascal_test (line 40)
+  parfor i = 1:num_ids;
+
+In pascal (line 68)
+ds = pascal_test(model, testset, testyear, suffix);
+} 
+exit

@@ -56,15 +56,17 @@ toc(th);
 % Free the feature vector cache memory
 fv_cache('free');
 
+fprintf('ALL JOB WAS DONE');
+%exit;
 % Lower threshold to get high recall
 model.thresh = min(conf.eval.max_thresh, model.thresh);
 model.interval = conf.eval.interval;
 
 suffix = testyear;
-disp('ENTER HERE!!!!!!!!');
+disp('Testing !!!!!!!!');
 % Collect detections on the test set
 ds = pascal_test(model, testset, testyear, suffix);
-
+disp('Evaluation !!!!!!');
 % Evaluate the model without bounding box prediction
 ap1 = pascal_eval(cls, ds, testset, testyear, suffix);
 fprintf('AP = %.4f (without bounding box prediction)\n', ap1)

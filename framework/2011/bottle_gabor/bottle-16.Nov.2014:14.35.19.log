@@ -1,0 +1,173 @@
+Elapsed time is 0.392146 seconds.
+Cache freed; byte size is: 0
+ALL JOB WAS DONETesting !!!!!!!!
+Evaluation !!!!!!
+AP = 0.0000 (without bounding box prediction)
+framework bottle: bbox predictor training...[Warning: Rank deficient, rank = 15, tol =  3.685940e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 33
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+[Warning: Rank deficient, rank = 15, tol =  3.685940e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 34
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+[Warning: Rank deficient, rank = 15, tol =  3.685940e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 35
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+[Warning: Rank deficient, rank = 15, tol =  3.685940e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 36
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+[Warning: Rank deficient, rank = 15, tol =  3.663736e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 33
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+[Warning: Rank deficient, rank = 15, tol =  3.663736e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 34
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+[Warning: Rank deficient, rank = 15, tol =  3.663736e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 35
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+[Warning: Rank deficient, rank = 15, tol =  3.663736e-14.] 
+[> In bboxpred_train>getcoeffs at 49
+  In bboxpred_train at 36
+  In bboxpred_rescore at 25
+  In pascal at 75
+  In training at 3] 
+done
+framework bottle: bbox rescoring test: 89/10994
+framework bottle: bbox rescoring test: 186/10994
+framework bottle: bbox rescoring test: 283/10994
+framework bottle: bbox rescoring test: 383/10994
+framework bottle: bbox rescoring test: 481/10994
+framework bottle: bbox rescoring test: 577/10994
+framework bottle: bbox rescoring test: 672/10994
+framework bottle: bbox rescoring test: 768/10994
+framework bottle: bbox rescoring test: 865/10994
+framework bottle: bbox rescoring test: 963/10994
+framework bottle: bbox rescoring test: 1059/10994
+framework bottle: bbox rescoring test: 1155/10994
+framework bottle: bbox rescoring test: 1252/10994
+framework bottle: bbox rescoring test: 1349/10994
+framework bottle: bbox rescoring test: 1448/10994
+framework bottle: bbox rescoring test: 1545/10994
+framework bottle: bbox rescoring test: 1643/10994
+framework bottle: bbox rescoring test: 1739/10994
+framework bottle: bbox rescoring test: 1837/10994
+framework bottle: bbox rescoring test: 1932/10994
+framework bottle: bbox rescoring test: 2029/10994
+framework bottle: bbox rescoring test: 2124/10994
+framework bottle: bbox rescoring test: 2223/10994
+framework bottle: bbox rescoring test: 2318/10994
+framework bottle: bbox rescoring test: 2407/10994
+framework bottle: bbox rescoring test: 2499/10994
+framework bottle: bbox rescoring test: 2593/10994
+framework bottle: bbox rescoring test: 2688/10994
+framework bottle: bbox rescoring test: 2783/10994
+framework bottle: bbox rescoring test: 2878/10994
+framework bottle: bbox rescoring test: 2975/10994
+framework bottle: bbox rescoring test: 3071/10994
+framework bottle: bbox rescoring test: 3169/10994
+framework bottle: bbox rescoring test: 3262/10994
+framework bottle: bbox rescoring test: 3355/10994
+framework bottle: bbox rescoring test: 3449/10994
+framework bottle: bbox rescoring test: 3543/10994
+framework bottle: bbox rescoring test: 3639/10994
+framework bottle: bbox rescoring test: 3735/10994
+framework bottle: bbox rescoring test: 3830/10994
+framework bottle: bbox rescoring test: 3924/10994
+framework bottle: bbox rescoring test: 4019/10994
+framework bottle: bbox rescoring test: 4113/10994
+framework bottle: bbox rescoring test: 4203/10994
+framework bottle: bbox rescoring test: 4293/10994
+framework bottle: bbox rescoring test: 4384/10994
+framework bottle: bbox rescoring test: 4476/10994
+framework bottle: bbox rescoring test: 4565/10994
+framework bottle: bbox rescoring test: 4655/10994
+framework bottle: bbox rescoring test: 4750/10994
+framework bottle: bbox rescoring test: 4841/10994
+framework bottle: bbox rescoring test: 4934/10994
+framework bottle: bbox rescoring test: 5026/10994
+framework bottle: bbox rescoring test: 5119/10994
+framework bottle: bbox rescoring test: 5212/10994
+framework bottle: bbox rescoring test: 5305/10994
+framework bottle: bbox rescoring test: 5399/10994
+framework bottle: bbox rescoring test: 5491/10994
+framework bottle: bbox rescoring test: 5582/10994
+framework bottle: bbox rescoring test: 5674/10994
+framework bottle: bbox rescoring test: 5766/10994
+framework bottle: bbox rescoring test: 5859/10994
+framework bottle: bbox rescoring test: 5952/10994
+framework bottle: bbox rescoring test: 6044/10994
+framework bottle: bbox rescoring test: 6136/10994
+framework bottle: bbox rescoring test: 6228/10994
+framework bottle: bbox rescoring test: 6319/10994
+framework bottle: bbox rescoring test: 6411/10994
+framework bottle: bbox rescoring test: 6502/10994
+framework bottle: bbox rescoring test: 6594/10994
+framework bottle: bbox rescoring test: 6687/10994
+framework bottle: bbox rescoring test: 6782/10994
+framework bottle: bbox rescoring test: 6880/10994
+framework bottle: bbox rescoring test: 6976/10994
+framework bottle: bbox rescoring test: 7070/10994
+framework bottle: bbox rescoring test: 7167/10994
+framework bottle: bbox rescoring test: 7266/10994
+framework bottle: bbox rescoring test: 7360/10994
+framework bottle: bbox rescoring test: 7455/10994
+framework bottle: bbox rescoring test: 7554/10994
+framework bottle: bbox rescoring test: 7651/10994
+framework bottle: bbox rescoring test: 7744/10994
+framework bottle: bbox rescoring test: 7840/10994
+framework bottle: bbox rescoring test: 7935/10994
+framework bottle: bbox rescoring test: 8030/10994
+framework bottle: bbox rescoring test: 8124/10994
+framework bottle: bbox rescoring test: 8220/10994
+framework bottle: bbox rescoring test: 8313/10994
+framework bottle: bbox rescoring test: 8406/10994
+framework bottle: bbox rescoring test: 8500/10994
+framework bottle: bbox rescoring test: 8595/10994
+framework bottle: bbox rescoring test: 8690/10994
+framework bottle: bbox rescoring test: 8783/10994
+framework bottle: bbox rescoring test: 8879/10994
+framework bottle: bbox rescoring test: 8974/10994
+framework bottle: bbox rescoring test: 9070/10994
+framework bottle: bbox rescoring test: 9166/10994
+framework bottle: bbox rescoring test: 9261/10994
+framework bottle: bbox rescoring test: 9356/10994
+framework bottle: bbox rescoring test: 9449/10994
+framework bottle: bbox rescoring test: 9545/10994
+framework bottle: bbox rescoring test: 9641/10994
+framework bottle: bbox rescoring test: 9738/10994
+framework bottle: bbox rescoring test: 9837/10994
+framework bottle: bbox rescoring test: 9933/10994
+framework bottle: bbox rescoring test: 10030/10994
+framework bottle: bbox rescoring test: 10124/10994
+framework bottle: bbox rescoring test: 10220/10994
+framework bottle: bbox rescoring test: 10315/10994
+framework bottle: bbox rescoring test: 10410/10994
+framework bottle: bbox rescoring test: 10504/10994
+framework bottle: bbox rescoring test: 10599/10994
+framework bottle: bbox rescoring test: 10692/10994
+framework bottle: bbox rescoring test: 10785/10994
+framework bottle: bbox rescoring test: 10881/10994
+framework bottle: bbox rescoring test: 10977/10994
+AP = 0.0000 (without bounding box prediction)
+AP = 0.0000 (with bounding box prediction)
+Sending a stop signal to all the workers ... stopped.

@@ -2,7 +2,7 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
-#include "/usr/local/lib/gcc/x86_64-apple-darwin13.1.0/4.9.0/include/omp.h"
+#include <omp.h>
 
 using namespace std;
 

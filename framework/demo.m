@@ -5,7 +5,7 @@ fprintf('compiling the code...');
 % compile;
 fprintf('done.\n\n');
 
-load('/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/2011/bottle_final');
+load('/home/dev/rfuenzalida-tesis/tesis/framework/2011/bottle_final');
 model.vis = @() visualizemodel(model, 1:2:length(model.rules{model.start}));
 cls = model.class;
 clf;
@@ -15,20 +15,20 @@ disp([cls ' model visualization']);
 disp('press any key to continue'); pause;
 disp('continuing...');
 
-tf_path = '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/VOC2011/VOCdevkit/VOC2011/ImageSets/Main/bottle_trainval.txt';
+tf_path = '/home/dev/rfuenzalida-tesis/tesis/framework/VOC2011/VOCdevkit/VOC2011/ImageSets/Main/bottle_trainval.txt';
 [idx, clss] = textread(tf_path, '%s %f', 5823);
 idc = find(clss == 1);
 dtc = zeros(size(idc,1), 1);
 % tiempo total
 tt = 0;
 for i=1:size(idc,1);
-  b_path = '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/VOC2011/VOCdevkit/VOC2011/JPEGImages/';
+  b_path = '/home/dev/rfuenzalida-tesis/tesis/framework/VOC2011/VOCdevkit/VOC2011/JPEGImages/';
   img_id = strcat(idx{idc(i)}, '.jpg'); % idc(i)
   fprintf ('%d.- Testing image: %s,', i, idx{idc(i)}); %idc(i)
   img = strcat(b_path, img_id);
 
   % read annotation
-  a_path = '/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework/VOC2011/VOCdevkit/VOC2011/Annotations/';
+  a_path = '/home/dev/rfuenzalida-tesis/tesis/framework/VOC2011/VOCdevkit/VOC2011/Annotations/';
   img_an = strcat(idx{idc(i)}, '.xml'); % idc(i)
   filename = strcat(a_path, img_an);
   try

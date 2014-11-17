@@ -14,6 +14,8 @@ function [ds_all, bs_all, targets] = bboxpred_data(name)
 %   name      Object class
 
 conf = voc_config();
+algorithm = conf.algorithm;
+verbose = conf.verbose;
 
 try
   load([conf.paths.model_dir name '_bboxdata']);
@@ -45,7 +47,7 @@ catch
     % get example
     im = imreadx(pos(i));
     [im, bbox] = croppos(im, bbox);
-    [pyra, model_dp] = gdetect_pos_prepare(im, model, bbox, 0.7);
+    [pyra, model_dp] = gdetect_pos_prepare(im, model, bbox, 0.7, algorithm, verbose);
     [ds, bs] = gdetect_pos(pyra, model_dp, 1, ...
                             1, 0.7, [], 0.5);
     if ~isempty(ds)

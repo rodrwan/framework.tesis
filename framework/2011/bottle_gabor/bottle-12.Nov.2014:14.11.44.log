@@ -1,0 +1,31 @@
+Elapsed time is 0.455678 seconds.
+Cache freed; byte size is: 0
+ALL JOB WAS DONEENTER HERE!!!!!!!!
+
+ans =
+
+/home/dev/rfuenzalida-tesis/tesis/framework/VOC2011/VOCdevkit/VOC2011/ImageSets/Main/%s.txt
+
+
+testset =
+
+test
+
+bottle: testing: test 2011, 10994/10994
+{Error using imgdetect (line 15)
+Not enough input arguments.
+
+Error in pascal_test>(parfor body) (line 52)
+    [ds, bs] = imgdetect(im, model, model.thresh);
+
+Error in pascal_test (line 40)
+  parfor i = 1:num_ids;
+
+Error in pascal (line 68)
+ds = pascal_test(model, testset, testyear, suffix);
+
+Caused by:
+    Error using imgdetect (line 15)
+    Not enough input arguments.
+} 
+exit
