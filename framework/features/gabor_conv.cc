@@ -34,12 +34,12 @@ double filter_response(double *img, const int im_i, const int *idims,
   int m_img = idims[0];
   int n_img = idims[1];
 
+  // images access pointer
+  double *im = img + im_i;
   double acc = 0, f_val, i_val, i_val_ch1, i_val_ch2, i_val_ch3;
-  for (int i = 0; i < m_fil*n_fil; i++) {
+  for (int i = 0; i < m_fil*n_fil; i += 1) {
     // filter access pointer
     f_val = std::abs(*(g+i));
-    // images access pointer
-    double *im = img + im_i;
     // image channel 1
     i_val_ch1 = std::abs(*(im + (i%m_fil) + (int)(i/m_fil)*m_img));
     // image channel 2
@@ -66,12 +66,12 @@ mxArray *gabor(double *img, const int *idims, const mxArray *filter, const int *
   int out[3];
   out[0] = idims[0];
   out[1] = idims[1];
-  out[2] = uv+1;
+  out[2] = uv;
   mxArray *mxGabor = mxCreateNumericArray(3, out, mxDOUBLE_CLASS, mxREAL);
-  float *gabors = (float *)mxGetPr(mxGabor);
-
+  double *gabors = (double *)mxGetPr(mxGabor);
+  int img_size = idims[0]*idims[1];
   // loop through each filter
-  for (int fi = 0; fi < uv; fi++) {
+  for (int fi = 0; fi < uv-1; fi += 1) {
     // Get current filter from filter pool
     mxArray *current_filter = mxGetCell(filter, fi);
     // Pointer for current filter
@@ -82,8 +82,7 @@ mxArray *gabor(double *img, const int *idims, const mxArray *filter, const int *
     int center_x = (int)(fcdims[0]/2);
     int center_y = (int)(fcdims[1]/2);
     double resp;
-    int img_size = (idims[0]*idims[1])-2;
-    for (int i = 0; i < img_size; i++) {
+    for (int i = 0; i < img_size; i += 1) {
       resp = filter_response(img, i, idims, cf, fcdims);
       int offset = i + center_x + (center_y*idims[0]) + img_size*fi;
       *(gabors + offset) = resp;
@@ -91,7 +90,6 @@ mxArray *gabor(double *img, const int *idims, const mxArray *filter, const int *
   }
   return mxGabor;
 }
-
 mxArray *process(const mxArray *mximage, const mxArray *filterArray) {
 
   double *im = (double *)mxGetPr(mximage);
