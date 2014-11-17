@@ -19,7 +19,7 @@ function conf = voc_config(varargin)
 % Please read the next few lines
 
 % Parent directory that everything (model cache, VOCdevkit) is under
-BASE_DIR    = '~/rfuenzalida-tesis/tesis/framework'; %'/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework';
+BASE_DIR    = pwd; %'/Users/rodrwan/Documents/Algorithms/tesis/voc-release5/framework';
 
 % PASCAL dataset year to use
 PASCAL_YEAR = '2011';
@@ -167,7 +167,7 @@ conf = cv(conf, 'training.lbfgs.options.optTol', 0.000001);
 
 conf = cv(conf, 'training.interval_fg', 5);
 conf = cv(conf, 'training.interval_bg', 4);
-conf = cv(conf, 'algorithm', 'hog');
+conf = cv(conf, 'algorithm', 'gabor');
 conf = cv(conf, 'verbose', 'no');
 % conf = cv(conf, 'gaborArray', makeGaborBank(9, 9, 8, 4));
 
